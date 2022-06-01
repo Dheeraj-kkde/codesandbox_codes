@@ -1,0 +1,19 @@
+//App.js
+
+import "./styles.css";
+import { useRef } from "react";
+
+export default function App() {
+  const inputElement = useRef();
+
+  const handleFocus = () => {
+    inputElement.current.focus();
+  };
+
+  return (
+    <div>
+      <input type="text" ref={inputElement} placeholder="enter the text" />
+      <button onClick={handleFocus}>Focus Input</button>
+    </div>
+  );
+}
